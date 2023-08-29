@@ -1,0 +1,20 @@
+.InputValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.InputValue input {
+  width: 25rem;
+  height: 3rem;
+  padding-left: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
+
+.InputValue input:focus {
+  border-bottom: 2px solid #000;
+}
