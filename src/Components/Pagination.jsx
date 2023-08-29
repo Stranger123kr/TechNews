@@ -10,7 +10,7 @@ const Pagination = () => {
       <div className="btn">
         <button
           type="button"
-          class="btn  btn-dark btn-lg"
+          className="btn  btn-dark btn-lg"
           disabled={page <= 0}
           onClick={() => MorePage(-1)}
         >
@@ -21,7 +21,7 @@ const Pagination = () => {
         </span>
         <button
           type="button"
-          class="btn  btn-dark btn-lg"
+          className="btn  btn-dark btn-lg"
           disabled={page >= 50}
           onClick={() => MorePage(+1)}
         >

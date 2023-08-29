@@ -8,7 +8,7 @@ const Stories = () => {
   if (isLoading) {
     return (
       <>
-        <div class="lds-roller">
+        <div className="lds-roller">
           <div></div>
           <div></div>
           <div></div>
@@ -28,23 +28,21 @@ const Stories = () => {
         {hits.map((information) => {
           const { title, author, num_comments, url, objectID } = information;
           return (
-            <>
-              <div className="card" key={objectID}>
-                <h2>{title}</h2>
-                <p>
-                  By <span>{author}</span> | <span>{num_comments} </span>
-                  comments
-                </p>
-                <div className="card_buttons">
-                  <a href={url} target="_blank">
-                    Read More
-                  </a>
-                  <a href="#" onClick={() => DeletePost(objectID)}>
-                    Remove
-                  </a>
-                </div>
+            <div className="card" key={objectID}>
+              <h2>{title}</h2>
+              <p>
+                By <span>{author}</span> | <span>{num_comments} </span>
+                comments
+              </p>
+              <div className="card_buttons">
+                <a href={url} target="_blank">
+                  Read More
+                </a>
+                <a href="#" onClick={() => DeletePost(objectID)}>
+                  Remove
+                </a>
               </div>
-            </>
+            </div>
           );
         })}
       </div>

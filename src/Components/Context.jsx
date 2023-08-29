@@ -58,11 +58,7 @@ const AppProvider = ({ children }) => {
 
   const MorePage = (input) => {
     dispatch({ type: "MorePage", payload: input + state.page });
-    // console.log(input + 1);
-    // console.log(input - 1);
   };
-
-  console.log(state);
 
   // ----------------------------------------------------------------
 
