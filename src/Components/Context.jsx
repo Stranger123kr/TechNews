@@ -4,7 +4,7 @@ import axios from "axios";
 const AppContext = createContext();
 // -------------------------------------------------
 
-// const API = ``;
+const API = import.meta.env.VITE_SOME_KEY;
 
 const initialState = {
   isLoading: true,
@@ -67,9 +67,7 @@ const AppProvider = ({ children }) => {
   // ----------------------------------------------------------------
 
   useEffect(() => {
-    TechNews(
-      `http://hn.algolia.com/api/v1/search?query=${state.query}&page=${state.page}`
-    );
+    TechNews(`${API}query=${state.query}&page=${state.page}`);
   }, [state.query, state.page]);
 
   // ----------------------------------------------------------------
