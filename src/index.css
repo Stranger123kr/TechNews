@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --back: rgb(227, 227, 54);
+}
+
 body {
   background: #ccc;
 }

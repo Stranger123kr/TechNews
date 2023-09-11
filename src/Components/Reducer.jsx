@@ -27,6 +27,10 @@ const reducer = (state, action) => {
     // -------------------------------------------------------------------------
 
     case "MorePage":
+      if (action.payload >= state.nbPages) {
+        action.payload = 0;
+      }
+
       return { ...state, page: action.payload };
 
     // -------------------------------------------------------------------------

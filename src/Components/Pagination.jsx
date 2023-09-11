@@ -17,12 +17,12 @@ const Pagination = () => {
           Prev
         </button>
         <span>
-          {page} of {nbPages}
+          {page + 1} of {nbPages}
         </span>
         <button
           type="button"
           className="btn  btn-dark btn-lg"
-          disabled={page >= 50}
+          disabled={page >= nbPages}
           onClick={() => MorePage(+1)}
         >
           Next
