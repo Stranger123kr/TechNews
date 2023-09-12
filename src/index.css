@@ -7,10 +7,48 @@
   font-family: "Poppins", sans-serif;
 }
 
-:root {
-  --back: rgb(227, 227, 54);
+body {
+  background: var(--BackGround);
 }
 
-body {
-  background: #ccc;
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--BackGround);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background: var(--color);
+  background-clip: content-box;
+  border: 2px solid transparent;
+}
+
+:root {
+  --BackGround: rgb(227, 227, 54);
+  --color: #000;
+}
+
+.dark {
+  --BackGround: #000;
+  --color: #fff;
+}
+
+/* ========================================================== */
+
+@media (width <= 530px) {
+  .InputValue input {
+    width: 18rem;
+  }
+
+  .Story_container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+    padding: 0 3rem;
+  }
 }
